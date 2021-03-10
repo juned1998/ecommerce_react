@@ -1,0 +1,12 @@
+.products {
+    padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+@media only screen and (max-width: 991px) {
+    .products {
+        flex-direction: column;
+    }
+}
