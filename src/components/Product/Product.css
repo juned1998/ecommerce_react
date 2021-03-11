@@ -12,6 +12,7 @@
     margin: auto;
     object-fit: cover;
     max-height: 450px;
+    max-width: 100%;
 }
 
 .product-detail__information {
@@ -62,8 +63,16 @@
 }
 
 @media screen and (max-width: 991px) {
+    .product-detail {
+        flex-direction: column;
+    }
     .product-detail__img {
         width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .product-detail__img img {
+        max-height: 320px;
     }
 
     .product-detail__information {
