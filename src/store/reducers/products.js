@@ -4,6 +4,7 @@ const initialState = {
     products: null,
     error: false,
     loading: false,
+    allProductsLoaded: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -21,6 +22,7 @@ const reducer = (state = initialState, action) => {
                 products: action.products,
                 error: false,
                 loading: false,
+                allProductsLoaded: true,
             };
 
         case actionTypes.SET_ERROR:

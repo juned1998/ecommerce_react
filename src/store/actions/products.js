@@ -8,7 +8,7 @@ export const getProducts = () => {
 
 export const setProducts = (products) => {
     return {
-        products: products,
+        products,
         type: actionTypes.SET_PRODUCTS,
     };
 };
@@ -22,14 +22,17 @@ export const setError = () => {
 export const fetchProducts = () => {
     return async (dispatch) => {
         try {
+            // set Loading: true by dispatching getProducts
             dispatch(getProducts());
 
             // get data.json from public directory
             const response = await fetch("./data.json");
             const products = await response.json();
 
+            // set products after getting json data
             dispatch(setProducts(products));
         } catch (err) {
+            // Set error: true if error
             dispatch(setError());
         }
     };

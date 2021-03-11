@@ -2,10 +2,8 @@
     padding: 16px;
     padding-top: 120px;
     padding-bottom: 120px;
-    display: grid;
-    grid-template-columns: 40% 40%;
+    display: flex;
     justify-content: center;
-    grid-gap: 10%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -14,7 +12,6 @@
     display: block;
     margin: auto;
     object-fit: cover;
-    max-height: 450px;
 }
 
 .product-detail__title {
