@@ -13,9 +13,11 @@ import thunk from "redux-thunk";
 
 // Products reducer
 import productsReducer from "./store/reducers/products";
+import cartReducer from "./store/reducers/cart";
 
 const rootReducer = combineReducers({
     products: productsReducer,
+    cart: cartReducer,
 });
 
 const composeEnhancers =

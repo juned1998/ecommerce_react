@@ -1,9 +1,17 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import * as actions from "./../../store/actions/index";
 
 import "./Product.css";
 
 const Product = (props) => {
     const [quantity, setQuantity] = useState(1);
+
+    const dispatch = useDispatch();
+
+    const addItemInCart = () => {
+        dispatch(actions.addItem(props.id, quantity));
+    };
 
     return (
         <div className="product-detail">
@@ -34,7 +42,10 @@ const Product = (props) => {
                             +
                         </button>
                     </div>
-                    <button className="product-detail__addToCart">
+                    <button
+                        className="product-detail__addToCart"
+                        onClick={addItemInCart}
+                    >
                         Add to Cart
                     </button>
                 </div>

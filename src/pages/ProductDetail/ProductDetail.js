@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router";
 import * as actions from "./../../store/actions/index";
@@ -40,7 +40,7 @@ const ProductDetail = () => {
         }
     }
 
-    return productSingle;
+    return <div className="container">{productSingle}</div>;
 };
 
 export default ProductDetail;

@@ -40,7 +40,7 @@ const Products = () => {
         ProductCards = <h2>Something went wrong</h2>;
     }
 
-    return <div className="products">{ProductCards}</div>;
+    return <div className="container products">{ProductCards}</div>;
 };
 
 export default Products;

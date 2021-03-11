@@ -1,5 +1,4 @@
 .products {
-    padding: 16px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
