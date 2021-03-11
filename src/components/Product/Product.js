@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./Product.css";
 
 const Product = (props) => {
+    const [quantity, setQuantity] = useState(1);
+
     return (
         <div className="product-detail">
             <div className="product-detail__img">
@@ -15,9 +17,22 @@ const Product = (props) => {
                 <div className="product-detail__footer">
                     <div className="product-detail__quantity">
                         <h5>Quantity: </h5>
-                        <button>-</button>
-                        <span>1</span>
-                        <button>+</button>
+                        <button
+                            onClick={() => {
+                                setQuantity(quantity - 1);
+                            }}
+                            disabled={quantity <= 1 ? true : false}
+                        >
+                            -
+                        </button>
+                        <span>{quantity}</span>
+                        <button
+                            onClick={() => {
+                                setQuantity(quantity + 1);
+                            }}
+                        >
+                            +
+                        </button>
                     </div>
                     <button className="product-detail__addToCart">
                         Add to Cart
