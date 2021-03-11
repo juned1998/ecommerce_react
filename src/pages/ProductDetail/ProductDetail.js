@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router";
+import * as actions from "./../../store/actions/index";
 
 import Product from "./../../components/Product/Product";
-import "./ProductDetail.css";
-
-import * as actions from "./../../store/actions/index";
 
 const ProductDetail = () => {
     // Extracting id from url
